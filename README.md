@@ -21,7 +21,21 @@ Time spent: **X** hours spent in total
     - [Link 2](https://www.exploit-db.com/exploits/36844/)
     - [Link 3](http://klikki.fi/adv/wordpress2.html)
     - [Link 4](http://packetstormsecurity.com/files/131644/)
-1. (Required) Vulnerability Name or ID
+2. (Required) Authenticated Cross-Site Scripting (XSS) in YouTube URL Embeds.
+  - [X] Summary: 
+    - Vulnerability types: CSRF
+    - Tested in version: 4.2
+    - Fixed in version: 4.7.3
+  - [X] GIF Walkthrough: 
+    ![csrf](./gifs/2_csrf.gif)
+  - [X] Steps to recreate: 
+    1. As an Author/Contributor, post this YouTube embed snippet:
+    `[embed src='https://www.youtube.com/embed/LXb3EKWsInQ\x3csvg onload=alert(document.cookie)\x3e'][/embed]`
+  - [X] Affected source code:
+    - [Link 1](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6817)
+    - [Link 2](https://nvd.nist.gov/vuln/detail/CVE-2017-6817)
+    - [Link 3](https://github.com/WordPress/WordPress/commit/419c8d97ce8df7d5004ee0b566bc5e095f0a6ca8)
+3. (Required) Vulnerability Name or ID
   - [ ] Summary: 
     - Vulnerability types:
     - Tested in version:
@@ -30,7 +44,7 @@ Time spent: **X** hours spent in total
   - [ ] Steps to recreate: 
   - [ ] Affected source code:
     - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
-1. (Required) Vulnerability Name or ID
+4. (Optional) Vulnerability Name or ID
   - [ ] Summary: 
     - Vulnerability types:
     - Tested in version:
@@ -39,16 +53,7 @@ Time spent: **X** hours spent in total
   - [ ] Steps to recreate: 
   - [ ] Affected source code:
     - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
-1. (Optional) Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
-  - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
-  - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
-1. (Optional) Vulnerability Name or ID
+5. (Optional) Vulnerability Name or ID
   - [ ] Summary: 
     - Vulnerability types:
     - Tested in version:
