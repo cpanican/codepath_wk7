@@ -6,15 +6,21 @@ Time spent: **X** hours spent in total
 
 ## Pentesting Report
 
-1. (Required) Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
-  - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
-  - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+1. (Required) Unauthenticated Stored Cross-Site Scripting (XSS)
+  - [X] Summary: 
+    - Vulnerability types: XSS
+    - Tested in version: 4.2
+    - Fixed in version: 4.2.1
+  - [X] GIF Walkthrough:
+    ![xss](./gifs/1_xss.gif)
+  - [X] Steps to recreate: 
+    1. Post the following text to a comment: [Link 1](./assets/1_xss.txt)
+    2. When an admin sees the ocmment, then the code is executed.
+  - [X] Affected source code:
+    - [Link 1](https://wpvulndb.com/vulnerabilities/7945)
+    - [Link 2](https://www.exploit-db.com/exploits/36844/)
+    - [Link 3](http://klikki.fi/adv/wordpress2.html)
+    - [Link 4](http://packetstormsecurity.com/files/131644/)
 1. (Required) Vulnerability Name or ID
   - [ ] Summary: 
     - Vulnerability types:
@@ -56,6 +62,8 @@ Time spent: **X** hours spent in total
 
 List any additional assets, such as scripts or files
 
+- [XSS Comment](./assets/1_xss.txt)
+
 ## Resources
 
 - [WordPress Source Browser](https://core.trac.wordpress.org/browser/)
@@ -65,11 +73,12 @@ GIFs created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while doing the work
+The command `root@kali:~# wpscan --url http://wpdistillery.vm --random-agent` returned
+`Scan Aborted: invalid option: --random-agent`
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2018] [Chris Panican]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
