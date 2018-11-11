@@ -15,7 +15,7 @@ Time spent: **7** hours spent in total
     ![xss](./gifs/1_xss.gif)
   - [X] Steps to recreate: 
     1. Post the following text to a comment: [Link 1](./assets/1_xss.txt)
-    2. When an admin sees the ocmment, then the code is executed.
+    2. When an admin sees/approves the comment, then the code is executed.
   - [X] Affected source code:
     - [Link 1](https://wpvulndb.com/vulnerabilities/7945)
     - [Link 2](https://www.exploit-db.com/exploits/36844/)
@@ -31,7 +31,7 @@ Time spent: **7** hours spent in total
   - [X] Steps to recreate: 
     1. As an Author/Contributor, post this YouTube embed snippet:
     ```
-    [embed src='https://www.youtube.com/embed/LXb3EKWsInQ\x3csvg onload=alert(document.cookie)\x3e'][/embed]
+    [embed src='https://www.youtube.com/embed/dQw4w9WgXcQ\x3csvg onload=alert(document.cookie)\x3e'][/embed]
     ```
   - [X] Affected source code:
     - [Link 1](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6817)
