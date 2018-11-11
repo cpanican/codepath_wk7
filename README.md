@@ -1,6 +1,6 @@
 # Project 7 - WordPress Pentesting
 
-Time spent: **X** hours spent in total
+Time spent: **7** hours spent in total
 
 > Objective: Find, analyze, recreate, and document **five vulnerabilities** affecting an old version of WordPress
 
@@ -36,14 +36,19 @@ Time spent: **X** hours spent in total
     - [Link 2](https://nvd.nist.gov/vuln/detail/CVE-2017-6817)
     - [Link 3](https://github.com/WordPress/WordPress/commit/419c8d97ce8df7d5004ee0b566bc5e095f0a6ca8)
 3. (Required) Vulnerability Name or ID
-  - [ ] Summary: 
+  - [X] Summary: 
     - Vulnerability types:
     - Tested in version:
     - Fixed in version: 
-  - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
-  - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+  - [X] GIF Walkthrough:
+    ![xss](.gifs/3_xss.gif)
+  - [X] Steps to recreate: 
+    1. Upload a media file and add a code snippet like this to the file name:
+    `<img src=a onClick=alert(document.cookie)>`
+    2. Upload as an attachment and post it.
+    3. NOTE: You need higher posting permissions to upload pictures
+  - [X] Affected source code:
+    - [Link 1](https://github.com/WordPress/WordPress/commit/c9e60dab176635d4bfaaf431c0ea891e4726d6e0)
 4. (Optional) Vulnerability Name or ID
   - [ ] Summary: 
     - Vulnerability types:
@@ -52,7 +57,6 @@ Time spent: **X** hours spent in total
   - [ ] GIF Walkthrough: 
   - [ ] Steps to recreate: 
   - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
 5. (Optional) Vulnerability Name or ID
   - [ ] Summary: 
     - Vulnerability types:
@@ -61,13 +65,13 @@ Time spent: **X** hours spent in total
   - [ ] GIF Walkthrough: 
   - [ ] Steps to recreate: 
   - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php) 
 
 ## Assets
 
 List any additional assets, such as scripts or files
 
 - [XSS Comment](./assets/1_xss.txt)
+- [Pusheen](./assets/)
 
 ## Resources
 
@@ -78,8 +82,9 @@ GIFs created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-The command `root@kali:~# wpscan --url http://wpdistillery.vm --random-agent` returned
+1. The command `root@kali:~# wpscan --url http://wpdistillery.vm --random-agent` returned
 `Scan Aborted: invalid option: --random-agent`
+2. Windows does not allow some special characters in file names such as `/`, `|`, `(`, `)` etc.
 
 ## License
 
