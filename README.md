@@ -30,21 +30,25 @@ Time spent: **7** hours spent in total
     ![csrf](./gifs/2_csrf.gif)
   - [X] Steps to recreate: 
     1. As an Author/Contributor, post this YouTube embed snippet:
-    `[embed src='https://www.youtube.com/embed/LXb3EKWsInQ\x3csvg onload=alert(document.cookie)\x3e'][/embed]`
+    ```
+    [embed src='https://www.youtube.com/embed/LXb3EKWsInQ\x3csvg onload=alert(document.cookie)\x3e'][/embed]
+    ```
   - [X] Affected source code:
     - [Link 1](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6817)
     - [Link 2](https://nvd.nist.gov/vuln/detail/CVE-2017-6817)
     - [Link 3](https://github.com/WordPress/WordPress/commit/419c8d97ce8df7d5004ee0b566bc5e095f0a6ca8)
-3. (Required) Vulnerability Name or ID
+3. (Required) Authenticated Cross-Site Scripting (XSS) via Media File Metadata
   - [X] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
+    - Vulnerability types: XSS
+    - Tested in version: 4.2
+    - Fixed in version: 4.2.13
   - [X] GIF Walkthrough:
-    ![xss](.gifs/3_xss.gif)
+    ![xss](./gifs/3_xss.gif)
   - [X] Steps to recreate: 
     1. Upload a media file and add a code snippet like this to the file name:
-    `<img src=a onClick=alert(document.cookie)>`
+    ```
+    <img src=a onClick=alert(document.cookie)>
+    ```
     2. Upload as an attachment and post it.
     3. NOTE: You need higher posting permissions to upload pictures
   - [X] Affected source code:
